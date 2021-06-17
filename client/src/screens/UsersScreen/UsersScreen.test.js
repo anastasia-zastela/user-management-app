@@ -4,23 +4,35 @@ import { mount, configure } from 'enzyme'
 import configureMockStore from 'redux-mock-store'
 import thunk from 'redux-thunk';
 import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
-
-import App from './App';
+import UsersScreen from './UsersScreen';
+import { MemoryRouter } from 'react-router';
 
 const mockStore = configureMockStore([thunk]);
 configure({ adapter: new Adapter() });
 
-describe('App', () => {
-  it('should render a ProfilesScreen component if userInfo is in a redux store', () => {
+describe('UsersScreen', () => {
+  it('should render an UsersScreen component if user is an admin', () => {
     const store = mockStore({
       userLogin: {
         userInfo: { data: {
-          isAdmin: false,
-          id: 1
+          isAdmin: true,
+          id: 1 
         }
       }
     },
-      profilesList: {
+      usersList: {
+        users: [
+          {
+            id: 1 ,
+            username: '',
+            email: '',
+            password: ''
+          }
+        ],
+        error: '',
+        loading: ''
+      },
+      allProfilesList: {
         profiles: [
           {
             id: 1 ,
@@ -37,9 +49,14 @@ describe('App', () => {
     });
     const wrapper = mount(
       <Provider store={store}>
-        <App />
+          <MemoryRouter
+                initialEntries={['./users']}
+                initialIndex={0}>
+                <UsersScreen />
+        </MemoryRouter>,
       </Provider>
     )
-    expect(wrapper.find('ProfilesScreen').length).toEqual(1)
+
+    expect(wrapper.find('UsersScreen').length).toEqual(1);
   })
 });

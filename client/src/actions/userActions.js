@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { pathConstant } from '../config/pathConstants';
+import { pathConstant } from '../configPaths/pathConstants';
 import { USER_DELETE_FAIL, USER_DELETE_REQUEST, USER_DELETE_SUCCESS, USER_LOGIN_FAIL, USER_LOGIN_REQUEST, USER_LOGIN_SUCCESS, USER_LOGOUT, USER_REGISTER_FAIL, USER_REGISTER_REQUEST, USER_REGISTER_SUCCESS, USER_UPDATE_FAIL, USER_UPDATE_REQUEST, USER_UPDATE_SUCCESS } from "../constants/userConstants"
 
 export const login = (email, password) => async (dispatch) => {

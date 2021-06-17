@@ -6,6 +6,8 @@ module.exports = app => {
 
     const { validateSignIn } = require('../middleware/validateSignIn');
 
+    const { validateUserFormToUpdate } = require("../middleware/validateUserFormToUpdate");
+
     const checkDuplicateUsernameOrEmail = require('../middleware/checkDuplicateUsernameOrEmail');
 
     const users = require("../controllers/userController.js");
@@ -21,7 +23,7 @@ module.exports = app => {
 
     router.post("/login", validateSignIn,  users.authUser);
   
-    router.put("/:id", verifyToken, validateUserForm, users.update);
+    router.put("/:id", verifyToken, validateUserFormToUpdate, users.update);
   
     router.delete("/:id", verifyToken, users.delete);
   

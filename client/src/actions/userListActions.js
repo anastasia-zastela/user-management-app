@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { pathConstant } from '../config/pathConstants';
+import { pathConstant } from '../configPaths/pathConstants';
 import { USERS_LIST_FAIL, USERS_LIST_REQUEST, USERS_LIST_SUCCESS } from '../constants/usersListConstants';
 
 export const listUsers = () => async (dispatch, getState) => {

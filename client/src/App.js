@@ -45,8 +45,6 @@ const App = () => {
         <Route path='/dashboard' component={DashboardScreen} />
         <Route path='/users' component={UsersScreen} exact/>
         <Route path='/users/:id' component={UserScreen} />
-        {/* <Redirect from="/" to="/profiles" /> */}
-        {/* <Route path='/' component={UsersScreen} exact /> */}
       </Container>
     </main>
   </Router>

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { Card, Button, Modal } from 'react-bootstrap';
-import UpdateUserInfoForm from '../UpdateUserInfoForm/UpdateUserForm';
+import UpdateUserInfoForm from '../UpdateUserInfoForm/UpdateUserInfoForm';
 import { useDispatch, useSelector } from 'react-redux';
 import { deleteUser } from '../../actions/userActions';
 import { deleteProfile } from '../../actions/profileActions';

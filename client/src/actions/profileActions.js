@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { pathConstant } from '../config/pathConstants';
+import { pathConstant } from '../configPaths/pathConstants';
 import { PROFILE_CREATE_FAIL, PROFILE_CREATE_REQUEST, PROFILE_CREATE_SUCCESS, PROFILE_DELETE_FAIL, PROFILE_DELETE_REQUEST, PROFILE_DELETE_SUCCESS, PROFILE_UPDATE_FAIL, PROFILE_UPDATE_REQUEST, PROFILE_UPDATE_SUCCESS } from "../constants/profileConstants";
 
 export const updateProfile = ({profileId, name, gender, birthdate, city}) => async (dispatch, getState) => {

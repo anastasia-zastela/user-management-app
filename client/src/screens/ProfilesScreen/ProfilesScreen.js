@@ -39,7 +39,7 @@ const ProfilesScreen = ({userId}) => {
             return;
         }
         dispatch(listProfilesByUserId(userId ? userId : userInfo.data.id))
-    }, [dispatch, history, userInfo, userId]);
+    }, [dispatch, userInfo, userId]);
 
 
     const createModal = (

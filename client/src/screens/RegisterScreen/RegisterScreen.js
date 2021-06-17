@@ -7,7 +7,6 @@ import Loader from '../../components/Loader/Loader';
 import FormContainer from '../../components/FormContainer/FormContainer';
 import { register } from '../../actions/userActions';
 import { validateUserInfo } from '../../helpers/validateInfo';
-import './RegisterScreen.css';
 
 const RegisterScreen = ({location, history}) => {
     const [username, setUsername] = useState('');

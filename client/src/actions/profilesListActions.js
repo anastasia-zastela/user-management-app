@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { pathConstant } from '../config/pathConstants';
+import { pathConstant } from '../configPaths/pathConstants';
 import { ALL_PROFILES_LIST_FAIL, ALL_PROFILES_LIST_REQUEST, ALL_PROFILES_LIST_SUCCESS, PROFILES_LIST_FAIL, PROFILES_LIST_REQUEST, PROFILES_LIST_SUCCESS } from '../constants/profilesListConstants';
 
 export const listProfilesByUserId = (userId) => async (dispatch, getState) => {
