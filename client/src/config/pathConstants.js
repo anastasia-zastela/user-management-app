@@ -1,0 +1,1 @@
+export const pathConstant = 'http://localhost:8080';
