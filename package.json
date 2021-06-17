@@ -8,6 +8,8 @@
     "server": "nodemon app/server",
     "client": "npm start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "data:import": "node app/seeder",
+    "data:destroy": "node app/destroy",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Anastasia Zastela",

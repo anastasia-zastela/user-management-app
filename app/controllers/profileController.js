@@ -2,9 +2,6 @@ const db = require("../models");
 const Profile = db.profiles;
 const Op = db.Sequelize.Op;
 
-// Create a new profile
-// POST /api/profiles
-// Public route
 exports.create = (req, res) => {
     if (!req.body.name || !req.body.gender || !req.body.birthdate || !req.body.city || !req.body.userId) {
         res.status(400).send({
@@ -34,9 +31,6 @@ exports.create = (req, res) => {
         });
 };
 
-// Create a new profile
-// GET /api/profiles
-// Private route
 exports.findAllByUserId = (req, res) => {
     Profile.findAll({where: { userId: req.params.userId}})
       .then(data => {
