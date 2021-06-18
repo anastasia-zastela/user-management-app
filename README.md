@@ -107,7 +107,7 @@ Routes are made proteced with middleware that verifies **JWT** token sent in Hea
 
 #### Password encryption
 
-Passwords in db are stored in encrypted form(**bcrypt** lib hashSync() function). When user authenticates bcrypt compareSync() function check if passwords match.
+Passwords in db are stored in encrypted form(**bcrypt** lib hashSync() function). When user authenticates bcrypt compareSync() function checks if passwords match.
 
 #### Stay login in implementation
 
@@ -117,5 +117,9 @@ When user authenticates, user data and user token are stored in localStorage. Wh
 #### Tests
 
 Unit tests for frontend side written with **Enzyme** to test each component.
+
+#### Docker
+
+Dockerfile written for backend, frontend and db, docker-compose.yml connects it together.
 
 #### Screens
