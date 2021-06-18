@@ -16,9 +16,9 @@ currently in the system, how many profiles are currently in total, how many prof
 
 #### Backend:
 
-PostgreSQL(Sequelize ORM to communicate with DB),
-Node JS,
-Express,
+**Node JS**,
+**PostgreSQL**(**Sequelize** ORM to communicate with DB),
+**Express**,
 Rest API
 
 #### Frontend:
@@ -90,9 +90,9 @@ const Profile = sequelize.define("profile", {
 
 #### Validation
 
-Validation of forms provided by both **frondend**(_client/helpers/validateInfo.js_) and **backend** sides(**app/middleware/validateProfileForm.js**,
-_app/middleware/validateUserForm.js_,
-_app/middleware/validateUserFormToUpdate.js_, _app/middleware/validateSignIn.js_).
+Validation of forms provided by both **frondend**(**client/helpers/validateInfo.js**) and **backend** sides(**app/middleware/validateProfileForm.js**,
+**app/middleware/validateUserForm.js**,
+**app/middleware/validateUserFormToUpdate.js**, **app/middleware/validateSignIn.js**).
 
 #### Tokens
 
@@ -101,7 +101,7 @@ initially is stored in Redux store.
 
 #### Protected routes
 
-Routes are made proteced with middleware that verifies **JWT** token sent in Header of request(_app/middleware/verifyToken.js_);
+Routes are made proteced with middleware that verifies **JWT** token sent in Header of request(**app/middleware/verifyToken.js**);
 
 #### Password encryption
 
