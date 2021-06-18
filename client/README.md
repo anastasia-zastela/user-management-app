@@ -1,70 +1,55 @@
-# Getting Started with Create React App
+# User Management CRUD App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+User management CRUD app written on PERN Stack(PostgreSQL, Express, React and Node.js). Each user is able to create an account and log in.
+Each user has name, email, password. Each user can have admin rights or not. Each user is able to create 1 or more profiles.
 
-In the project directory, you can run:
+A profile has fields: name, gender, birthdate, city. Each user can log out whenever he wants and the session wil not be interrupted if the user logs in at least
+once a month.
 
-### `yarn start`
+User (without admin rights) can view only your profiles (list and details), edit, delete. User (with admin rights) can view his own profiles, other users and their
+profiles (separate page), edit / delete users and / or their profiles, give another user admin rights, see a dashboard page with analytics(how many users are
+currently in the system, how many profiles are currently in total, how many profiles are over 18 years old).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Technical details
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+#### Backend:
 
-### `yarn test`
+PostgreSQL(Sequelize ORM to communicate with DB),
+Node JS,
+Express,
+Rest API
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### Frontend:
 
-### `yarn build`
+UI - react-bootstrap components with Lux free theme from https://bootswatch.com/
+Redux,
+React Hooks,
+Single page application (Web)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### DB models
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+#### Validation
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Validation of forms provided by both frondend(client/helpers/validateInfo.js) and backend sides(app/middleware/validateProfileForm.js,
+app/middleware/validateUserForm.js,
+app/middleware/validateUserFormToUpdate.js, app/middleware/validateSignIn.js,).
 
-### `yarn eject`
+#### Tokens
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Tokens are made with JWT lib that creates a new one on the backend side each time user authenticates to a system. Token stored in localStorage, and then
+initially is stored in Redux store.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+#### Protected routes
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Routes are made proteced with middleware that verifies JWT token sent in Header of request(app/middleware/verifyToken.js);
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+#### Password encryption
 
-## Learn More
+Passwords in db are stored in encrypted form(bcrypt lib hashSync() function). When user authenticates bcrypt compareSync() function check if passwords match.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+#### Stay login in implementation
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+When user authenticates, user data and user token are stored in localStorage. When page reloads or user closes the window, data from localStorage is stored in
+Redux store.
