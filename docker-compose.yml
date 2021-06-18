@@ -1,0 +1,33 @@
+version: '3.9'
+services:
+  db:
+    image: postgres:13.2
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    ports:
+      - 5432:5432
+    volumes:
+      - ./db/data:/var/lib/postgresql/data
+    restart: always
+    command: -p 5432
+
+  app:
+    build: ./app
+    container_name: test-app-dev
+    ports:
+      - 5000:5000
+    volumes:
+      - ./app:/test-app/app
+      - /node_modules
+    depends_on:
+      - db
+
+  client:
+    build: ./client
+    command: sh -c "npm run start"
+    ports:
+      - 3000:3000
+    volumes:
+      - ./client:/test-app/client
+      - /node_modules

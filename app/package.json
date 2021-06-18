@@ -4,6 +4,10 @@
   "description": "",
   "main": "server.js",
   "scripts": {
+    "start": "node server",
+    "dev": "node server",
+    "data:import": "node seeder",
+    "data:destroy": "node destroy",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Anastasia Zastela",
