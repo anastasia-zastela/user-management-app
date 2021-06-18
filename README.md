@@ -2,7 +2,9 @@
 
 ## Overview
 
-User management CRUD app written on PERN Stack(PostgreSQL, Express, React and Node.js). Each user is able to create an account and log in.
+**User management CRUD** app written on **PERN** Stack(**PostgreSQL**, **Express**, **React** and **Node.js**).
+
+Each user is able to create an account and log in.
 Each user has name, email, password. Each user can have admin rights or not. Each user is able to create 1 or more profiles.
 
 A profile has fields: name, gender, birthdate, city. Each user can log out whenever he wants and the session wil not be interrupted if the user logs in at least
@@ -111,5 +113,9 @@ Passwords in db are stored in encrypted form(**bcrypt** lib hashSync() function)
 
 When user authenticates, user data and user token are stored in localStorage. When page reloads or user closes the window, data from localStorage is stored in
 **Redux store**.
+
+#### Tests
+
+Unit tests for frontend side written with **Enzyme** to test each component.
 
 #### Screens

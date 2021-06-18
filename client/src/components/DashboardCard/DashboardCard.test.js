@@ -1,13 +1,7 @@
 import React from 'react';
-import { mount, configure } from 'enzyme'
-import configureMockStore from 'redux-mock-store'
-import thunk from 'redux-thunk';
-import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
+import { mount } from 'enzyme'
 import DashboardCard from './DashboardCard';
 import { MemoryRouter } from 'react-router';
-
-const mockStore = configureMockStore([thunk]);
-configure({ adapter: new Adapter() });
 
 describe('DashboardCard', () => {
   it('should render a DashboardCard component', () => {
