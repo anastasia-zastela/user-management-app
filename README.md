@@ -10,8 +10,8 @@ Each user has name, email, password. Each user can have admin rights or not. Eac
 A profile has fields: name, gender, birthdate, city. Each user can log out whenever he wants and the session wil not be interrupted if the user logs in at least
 once a month.
 
-User (without admin rights) can view only your profiles (list and details), edit, delete. User (with admin rights) can view his own profiles, other users and their
-profiles (separate page), edit / delete users and / or their profiles, give another user admin rights, see a dashboard page with analytics(how many users are
+User (without admin rights) can view only his own profiles (list and details), edit, delete. User (with admin rights) can view his own profiles, other users and their
+profiles (separate page), edit / delete users and / or their profiles, give to another user admin rights, see a dashboard page with analytics(how many users are
 currently in the system, how many profiles are currently in total, how many profiles are over 18 years old).
 
 ## Technical details
