@@ -23,9 +23,9 @@ Rest API
 
 #### Frontend:
 
-UI - react-bootstrap components with Lux free theme from https://bootswatch.com/
-Redux,
-React Hooks,
+**React JS**,
+**Redux**,
+UI - **react-bootstrap** components with **Lux** free theme from https://bootswatch.com/,
 Single page application (Web)
 
 #### DB models
@@ -90,7 +90,7 @@ const Profile = sequelize.define("profile", {
 
 #### Validation
 
-Validation of forms provided by both **frondend**(_client/helpers/validateInfo.js_) and **backend** sides(_app/middleware/validateProfileForm.js_,
+Validation of forms provided by both **frondend**(_client/helpers/validateInfo.js_) and **backend** sides(**app/middleware/validateProfileForm.js**,
 _app/middleware/validateUserForm.js_,
 _app/middleware/validateUserFormToUpdate.js_, _app/middleware/validateSignIn.js_).
 
@@ -101,7 +101,7 @@ initially is stored in Redux store.
 
 #### Protected routes
 
-Routes are made proteced with middleware that verifies JWT token sent in Header of request(_app/middleware/verifyToken.js_);
+Routes are made proteced with middleware that verifies **JWT** token sent in Header of request(_app/middleware/verifyToken.js_);
 
 #### Password encryption
 
