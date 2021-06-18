@@ -123,3 +123,13 @@ Unit tests for frontend side written with **Enzyme** to test each component.
 Dockerfile written for backend, frontend and db, docker-compose.yml connects it together.
 
 #### Screens
+
+<img width="1428" alt="Screenshot 2021-06-18 at 14 55 12" src="https://user-images.githubusercontent.com/77297643/122557309-4a221300-d045-11eb-8efd-765471310214.png">
+<img width="1418" alt="Screenshot 2021-06-18 at 14 54 44" src="https://user-images.githubusercontent.com/77297643/122557322-4f7f5d80-d045-11eb-9de5-8dbed36e3ad9.png">
+<img width="1420" alt="Screenshot 2021-06-18 at 14 54 33" src="https://user-images.githubusercontent.com/77297643/122557328-527a4e00-d045-11eb-88d3-f2a1b8657c44.png">
+<img width="1435" alt="Screenshot 2021-06-18 at 14 54 23" src="https://user-images.githubusercontent.com/77297643/122557335-54441180-d045-11eb-8308-b9c522c5bfc1.png">
+<img width="1427" alt="Screenshot 2021-06-18 at 14 53 55" src="https://user-images.githubusercontent.com/77297643/122557344-55753e80-d045-11eb-8e49-d04d0c9e0d86.png">
+<img width="1408" alt="Screenshot 2021-06-18 at 14 53 43" src="https://user-images.githubusercontent.com/77297643/122557351-56a66b80-d045-11eb-9c08-112b4a6b922f.png">
+<img width="1414" alt="Screenshot 2021-06-18 at 14 53 34" src="https://user-images.githubusercontent.com/77297643/122557355-58702f00-d045-11eb-813c-fad95d719006.png">
+<img width="1430" alt="Screenshot 2021-06-18 at 14 53 12" src="https://user-images.githubusercontent.com/77297643/122557359-5908c580-d045-11eb-8ed1-35e97e5e08a5.png">
+<img width="1429" alt="Screenshot 2021-06-18 at 14 53 05" src="https://user-images.githubusercontent.com/77297643/122557364-59a15c00-d045-11eb-825e-ed1c7e271344.png">
