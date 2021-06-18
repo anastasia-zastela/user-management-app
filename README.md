@@ -136,9 +136,9 @@ Sign In
 <img width="1429" alt="Screenshot 2021-06-18 at 14 53 05" src="https://user-images.githubusercontent.com/77297643/122557364-59a15c00-d045-11eb-825e-ed1c7e271344.png">
 Sign Up
 <img width="1430" alt="Screenshot 2021-06-18 at 14 53 12" src="https://user-images.githubusercontent.com/77297643/122557359-5908c580-d045-11eb-8ed1-35e97e5e08a5.png">
-Profiles Screen (for user with admin rights)
-<img width="1414" alt="Screenshot 2021-06-18 at 14 53 34" src="https://user-images.githubusercontent.com/77297643/122557355-58702f00-d045-11eb-813c-fad95d719006.png">
 Profiles Screen (for user without admin rights)
+<img width="1414" alt="Screenshot 2021-06-18 at 14 53 34" src="https://user-images.githubusercontent.com/77297643/122557355-58702f00-d045-11eb-813c-fad95d719006.png">
+Profiles Screen (for user with admin rights)
 <img width="1428" alt="Screenshot 2021-06-18 at 14 55 12" src="https://user-images.githubusercontent.com/77297643/122557309-4a221300-d045-11eb-8efd-765471310214.png">
 Create New Profile
 <img width="1408" alt="Screenshot 2021-06-18 at 14 53 43" src="https://user-images.githubusercontent.com/77297643/122557351-56a66b80-d045-11eb-9c08-112b4a6b922f.png">
