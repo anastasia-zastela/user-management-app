@@ -60,26 +60,56 @@ User.prototype.validPassword = function (password) {
 };
 ```
 
+```javascript
+const Profile = sequelize.define("profile", {
+      name: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
+      gender: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
+      birthdate: {
+        type: Sequelize.DATE,
+        allowNull: false
+      },
+      city: {
+        type: Sequelize.STRING,
+        allowNull: false
+      },
+      userId: {
+        type: Sequelize.INTEGER,
+        allowNull: false
+      }
+    });
+
+    return Profile;
+  };
+```
+
 #### Validation
 
-Validation of forms provided by both frondend(client/helpers/validateInfo.js) and backend sides(app/middleware/validateProfileForm.js,
-app/middleware/validateUserForm.js,
-app/middleware/validateUserFormToUpdate.js, app/middleware/validateSignIn.js,).
+Validation of forms provided by both **frondend**(_client/helpers/validateInfo.js_) and **backend** sides(_app/middleware/validateProfileForm.js_,
+_app/middleware/validateUserForm.js_,
+_app/middleware/validateUserFormToUpdate.js_, _app/middleware/validateSignIn.js_).
 
 #### Tokens
 
-Tokens are made with JWT lib that creates a new one on the backend side each time user authenticates to a system. Token stored in localStorage, and then
+Tokens are made with **JWT** lib that creates a new one on the backend side each time user authenticates to a system. Token is stored in localStorage, and then
 initially is stored in Redux store.
 
 #### Protected routes
 
-Routes are made proteced with middleware that verifies JWT token sent in Header of request(app/middleware/verifyToken.js);
+Routes are made proteced with middleware that verifies JWT token sent in Header of request(_app/middleware/verifyToken.js_);
 
 #### Password encryption
 
-Passwords in db are stored in encrypted form(bcrypt lib hashSync() function). When user authenticates bcrypt compareSync() function check if passwords match.
+Passwords in db are stored in encrypted form(**bcrypt** lib hashSync() function). When user authenticates bcrypt compareSync() function check if passwords match.
 
 #### Stay login in implementation
 
 When user authenticates, user data and user token are stored in localStorage. When page reloads or user closes the window, data from localStorage is stored in
-Redux store.
+**Redux store**.
+
+#### Screens
